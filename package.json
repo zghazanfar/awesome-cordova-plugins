@@ -1,27 +1,17 @@
 {
-  "name": "awesome-cordova-plugins",
-  "version": "6.3.0",
+  "name": "awesome-cordova-plugins-idbox",
+  "version": "1.0.0",
   "description": "Native plugin wrappers for Cordova and Ionic with TypeScript, ES6+, Promise and Observable support",
   "homepage": "https://awesome-cordova-plugins.com",
-  "author": "Daniel Sogl <me@danielsogl.com> (https://danielsogl.com)",
+  "author": "",
   "license": "MIT",
   "scripts": {
-    "prepare": "is-ci || husky install",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "build:core": "tsc -p tsconfig.core.json",
     "build:esm": "ts-node -P scripts/tsconfig.json scripts/tasks/build-esm",
     "build:es5": "ts-node -P scripts/tsconfig.json scripts/tasks/build-es5",
     "build:ngx": "ts-node -P scripts/tsconfig.json scripts/tasks/build-ngx",
-    "build": "npm run build:core && npm run build:esm && npm run build:ngx && npm run build:es5",
-    "prebuild": "rimraf -rf dist",
-    "npmpub": "ts-node -P scripts/tsconfig.json scripts/tasks/publish",
-    "lint": "eslint src/**/*.ts",
-    "readmes": "gulp readmes",
-    "docs-json": "ts-node -P scripts/tsconfig.json scripts/docs-json",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "shipit": "npm run build && npm run readmes && npm run npmpub",
-    "prettier": "prettier --write --ignore-unknown \"**/*\""
+    "build:packagejson": "ts-node -P scripts/tsconfig.json scripts/tasks/build-packagejson",
+    "build": "npm run build:esm && npm run build:ngx && npm run build:es5 && npm run build:packagejson",
+    "prebuild": "rimraf -rf dist"
   },
   "dependencies": {
     "tslib": "2.5.0"
@@ -31,6 +21,7 @@
     "@angular/compiler": "12.2.16",
     "@angular/compiler-cli": "12.2.16",
     "@angular/core": "12.2.16",
+    "@awesome-cordova-plugins/core": "^6.3.0",
     "@types/cordova": "11.0.0",
     "@types/fs-extra": "11.0.1",
     "@types/jest": "27.5.2",

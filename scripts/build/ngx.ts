@@ -59,7 +59,7 @@ export function generateDeclarationFiles() {
 
 export function generateLegacyBundles() {
   [
-    resolve(ROOT, 'dist/@awesome-cordova-plugins/core/index.js'),
+    resolve(ROOT, 'node_modules/@awesome-cordova-plugins/core/index.js'),
     ...PLUGIN_PATHS.map((p) => p.replace(join(ROOT, 'src'), join(ROOT, 'dist')).replace('index.ts', 'ngx/index.js')),
   ].forEach((p) =>
     rollup({

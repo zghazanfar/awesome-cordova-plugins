@@ -8,9 +8,6 @@
     "noImplicitAny": true,
     "module": "es2015",
     "moduleResolution": "node",
-    "paths": {
-      "@awesome-cordova-plugins/core": ["./dist/@awesome-cordova-plugins/core"]
-    },
     "outDir": "./dist",
     "rootDir": "src",
     "target": "es5",
@@ -19,7 +16,7 @@
     "inlineSources": true,
     "inlineSourceMap": true
   },
-  "include": ["src/@awesome-cordova-plugins/plugins/**/*.ts"],
+  "include": ["src/**/*.ts"],
   "angularCompilerOptions": {
     "genDir": "aot",
     "compilationMode": "partial"

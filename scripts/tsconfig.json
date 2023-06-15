@@ -5,9 +5,6 @@
     "moduleResolution": "node",
     "noImplicitAny": false,
     "lib": ["es6"],
-    "paths": {
-      "@awesome-cordova-plugins/core": ["../src/@awesome-cordova-plugins/core"]
-    }
   },
   "exclude": ["node_modules"]
 }
